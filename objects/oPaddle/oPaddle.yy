@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "oPaddle",
     "eventList": [
-        
+        {
+            "id": "6299f4ca-c841-4e20-942f-7171c04c9863",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 3,
+            "eventtype": 13,
+            "m_owner": "00134f31-491b-48b6-a071-40f2fa0df6bf"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
