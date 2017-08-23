@@ -66,7 +66,7 @@
             "Key": "260a1757-5d1e-49e6-bebb-a9ff89545638",
             "Value": {
                 "id": "2afe1826-02ae-401d-8669-c75473aed2d6",
-                "resourcePath": "rooms\\room0\\room0.yy",
+                "resourcePath": "rooms\\Spacer\\Spacer.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -108,6 +108,14 @@
                 "id": "9c9516f3-031a-4c59-be99-0d22e1e72d64",
                 "resourcePath": "views\\66ab4b7c-9bea-4596-8c9d-884a6e922522.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7145df83-3fea-461b-b059-37eca8fda08b",
+            "Value": {
+                "id": "056cda68-6da7-4d62-bfa9-ab5dcf662832",
+                "resourcePath": "sprites\\sTest\\sTest.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
