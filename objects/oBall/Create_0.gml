@@ -5,3 +5,4 @@ ball = [];
 global.blockList = [];
 vel = [300,-150];
 CollisionInit(false);
+global.velocity = 200;
