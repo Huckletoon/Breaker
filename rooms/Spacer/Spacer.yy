@@ -19,7 +19,8 @@
         "98578dfa-e69b-4a54-bcda-eca68757cb5b",
         "aeffb358-8dbb-4fd2-9ee1-c7645a47bacb",
         "c438d970-cf93-4659-b7a1-bec5961ecfe8",
-        "682416c4-b8f2-4590-b54f-13698009f7b8"
+        "682416c4-b8f2-4590-b54f-13698009f7b8",
+        "ed5624f0-8bfc-4d23-a43d-e9767ae96ac5"
     ],
     "layers": [
         {
@@ -305,6 +306,30 @@
                     "inheritCode": false,
                     "name_with_no_file_rename": "inst_79195698",
                     "objId": "00134f31-491b-48b6-a071-40f2fa0df6bf",
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1
+                },
+                {
+                    "id": "ed5624f0-8bfc-4d23-a43d-e9767ae96ac5",
+                    "modelName": "GMRInstance",
+                    "mvc": "1.0",
+                    "ignore": false,
+                    "inheritItemSettings": false,
+                    "m_originalParentID": "00000000-0000-0000-0000-000000000000",
+                    "m_serialiseFrozen": false,
+                    "name": "inst_1A84B035",
+                    "x": 176,
+                    "y": 544,
+                    "IsDnD": false,
+                    "colour": {
+                        "Value": 4294967295
+                    },
+                    "creationCodeFile": "",
+                    "creationCodeType": "",
+                    "inheritCode": false,
+                    "name_with_no_file_rename": "inst_1A84B035",
+                    "objId": "15f1607b-eac9-4591-9b9f-07b5b32ada57",
                     "rotation": 0,
                     "scaleX": 1,
                     "scaleY": 1
@@ -620,30 +645,6 @@
                     "scaleX": 1,
                     "scaleY": 1,
                     "spriteId": "7145df83-3fea-461b-b059-37eca8fda08b",
-                    "userdefined_animFPS": false
-                },
-                {
-                    "__type": "GMRSpriteGraphic_Model:#YoYoStudio.MVCFormat",
-                    "id": "956615d5-ccf7-4e04-83a9-d881b9585986",
-                    "modelName": "GMRSpriteGraphic",
-                    "mvc": "1.0",
-                    "ignore": false,
-                    "inheritItemSettings": false,
-                    "m_originalParentID": "00000000-0000-0000-0000-000000000000",
-                    "m_serialiseFrozen": false,
-                    "name": "graphic_25A20E62",
-                    "x": 207,
-                    "y": 471,
-                    "animationFPS": 15,
-                    "animationSpeedType": 0,
-                    "colour": {
-                        "Value": 4294967295
-                    },
-                    "frameIndex": 0,
-                    "rotation": 0,
-                    "scaleX": 1,
-                    "scaleY": 1,
-                    "spriteId": "38b03dcf-9bec-4524-9b1c-1bce3be5c5ad",
                     "userdefined_animFPS": false
                 }
             ]

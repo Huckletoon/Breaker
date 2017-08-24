@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "15f1607b-eac9-4591-9b9f-07b5b32ada57",
+            "Value": {
+                "id": "41bc449e-fa4c-428c-9258-82a3650a23dd",
+                "resourcePath": "objects\\oBall\\oBall.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "16dc947d-9f2a-4638-8a91-83292e1414e1",
             "Value": {
                 "id": "352efb4f-2e30-4a14-b3a6-3b1946f32e19",
@@ -79,6 +87,14 @@
             }
         },
         {
+            "Key": "29a42e61-cf7e-49cc-bfb9-0b0d17df4d5b",
+            "Value": {
+                "id": "3162f9ff-3bac-433c-a645-3fb37fc27e8b",
+                "resourcePath": "scripts\\CollisionTick\\CollisionTick.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "38b03dcf-9bec-4524-9b1c-1bce3be5c5ad",
             "Value": {
                 "id": "6610930e-182a-4b71-8f10-c926316ab4a6",
@@ -100,6 +116,14 @@
                 "id": "950d19d1-efe5-4f8c-8bee-da7895d1e145",
                 "resourcePath": "views\\5b85b831-77fa-4a40-8d4e-e57783aad286.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5e57d908-e185-42b1-b3bb-e75adf64dafa",
+            "Value": {
+                "id": "cd980235-63e8-47fb-b482-1c68fb2c3632",
+                "resourcePath": "scripts\\CollisionInit\\CollisionInit.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -156,6 +180,14 @@
                 "id": "41a36ea8-e746-49cd-902e-cb632c7d2663",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "a9bd2386-cc04-4ba9-bd79-b3342e35e2bd",
+            "Value": {
+                "id": "c1c0d7b1-f58f-441d-b0a2-586097e537da",
+                "resourcePath": "objects\\oBrick\\oBrick.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -224,7 +256,8 @@
         }
     ],
     "script_order": [
-        
+        "5e57d908-e185-42b1-b3bb-e75adf64dafa",
+        "29a42e61-cf7e-49cc-bfb9-0b0d17df4d5b"
     ],
     "tutorial": ""
 }
