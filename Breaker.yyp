@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "8427047f-9ef8-4c77-89f3-9c20623d07b6",
+            "Value": {
+                "id": "f8fa1e0a-a769-4e05-a711-bd28fa45268b",
+                "resourcePath": "options\\ios\\options_ios.yy",
+                "resourceType": "GMiOSOptions"
+            }
+        },
+        {
             "Key": "85fa71cb-04b8-445e-a787-8409b15504ab",
             "Value": {
                 "id": "bacbb038-4068-4f07-b961-2684ad80a5d1",
@@ -244,6 +252,14 @@
                 "id": "f493a4b0-9be4-4803-b470-7d0f10aff164",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "e42bf5cc-3f46-4d67-a6d0-a4885a11ac3f",
+            "Value": {
+                "id": "c6b3c422-da19-449e-b838-a5bc82d9cc11",
+                "resourcePath": "options\\android\\options_android.yy",
+                "resourceType": "GMAndroidOptions"
             }
         },
         {
