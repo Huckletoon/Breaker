@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "2862d4ce-0116-4645-aca6-8e5e166da7f7",
+            "Value": {
+                "id": "b974eab0-12d8-4105-b68d-896d3d855a4e",
+                "resourcePath": "objects\\oPaddleInput\\oPaddleInput.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "29a42e61-cf7e-49cc-bfb9-0b0d17df4d5b",
             "Value": {
                 "id": "3162f9ff-3bac-433c-a645-3fb37fc27e8b",
@@ -148,6 +156,14 @@
                 "id": "9c9516f3-031a-4c59-be99-0d22e1e72d64",
                 "resourcePath": "views\\66ab4b7c-9bea-4596-8c9d-884a6e922522.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "6e35c52b-9a70-49f1-a4c5-fa5dba10536b",
+            "Value": {
+                "id": "eec2a3a7-96b8-4c63-8c72-32184d2b267f",
+                "resourcePath": "sprites\\sprite3\\sprite3.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
