@@ -53,9 +53,10 @@
             "visible": true
         }
     ],
-    "origin": 4,
+    "origin": 7,
     "playbackSpeed": 15,
     "playbackSpeedType": 0,
+    "premultiplyAlpha": false,
     "sepmasks": false,
     "swatchColours": null,
     "swfPrecision": 2.525,
@@ -63,5 +64,5 @@
     "type": 0,
     "width": 86,
     "xorig": 43,
-    "yorig": 8
+    "yorig": 15
 }

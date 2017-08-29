@@ -2,6 +2,7 @@
 ball = argument0;
 //radius of ball 
 rad = 12;
+rid = rad - 3;
 //Paddle direction modifier
 dirMod = 2;
 //paddle Speed Increase
@@ -46,13 +47,25 @@ for (var i = 0; i < array_length_1d(global.blockList); i ++)
 			var velNorm = [ball.vel[0]/velMag, ball.vel[1]/velMag];
 			//increase velocity
 			velMag += spd;
+			//check sides
+			if (colNorm[1] >= -0.4472 and colNorm[1] <= 0.4472)
+			{
+				xDir = -1;
+			}
+			else
+			{
+				xDir = 1;
+			}
+			if(colNorm[0] >= -0.8944 and colNorm[0] <= 0.8944)
+			{
+				yDir = -1;
+			}
+			else
+			{
+				yDir = 1;
+			}
 			//wrap it all up
-			var tempVect = [velNorm[0] + dirMod * colNorm[0], velNorm[1] + dirMod * colNorm[1]];
-			var tempMag = sqrt(sqr(tempVect[0]) + sqr(tempVect[1]));
-			var tempNorm = [tempVect[0]/tempMag, tempVect[1]/tempMag];
-			
-			ball.vel = [velMag * tempNorm[0], velMag * tempNorm[1]];
-		
+			ball.vel = [velMag * velNorm[0] * xDir, velMag * velNorm[1] * yDir];
 			instance_destroy(brick);
 			global.blockList[i] = noone;
 		}
@@ -93,7 +106,7 @@ if (broken)
 
 //Collision with paddle
 var pad = instance_find(oPaddle,0);
-var isBelow = ball.y + rad > pad.y - pad.sprite_height/2;
+var isBelow = ball.y + rad > pad.y - pad.sprite_height;
 var isWithin = (ball.x - rad < pad.x + pad.sprite_width/2) and (ball.x + rad > pad.x - pad.sprite_width/2);
 if (isBelow and isWithin)
 {	
