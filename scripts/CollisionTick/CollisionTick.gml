@@ -5,7 +5,7 @@ rad = 12;
 rid = rad - 3;
 //Paddle direction modifier
 dirMod = 2;
-//paddle Speed Increase
+//Collision Speed Increase
 spd = 2;
 
 //boundary checking - NOT bottom boundary
@@ -17,13 +17,21 @@ if (ball.y < 174 + rad and ball.vel[1] < 0)
 {
 	ball.vel[1] *= (-1);
 }
+if (ball.y > 630)
+{
+	instance_destroy(ball);
+	global.Score -= 1000;
+	exit;
+}
+
 
 //Position update
 ball.x += ball.vel[0] * 1/game_get_speed(gamespeed_fps);
 ball.y += ball.vel[1] * 1/game_get_speed(gamespeed_fps);
 
 broken = false;
-//Collision with bricks
+//***Collision with bricks***
+#region
 for (var i = 0; i < array_length_1d(global.blockList); i ++)
 {
 	var brick = global.blockList[i];
@@ -48,7 +56,7 @@ for (var i = 0; i < array_length_1d(global.blockList); i ++)
 			//increase velocity
 			velMag += spd;
 			//check sides
-			if (colNorm[1] >= -0.4472 and colNorm[1] <= 0.4472)
+			if (colNorm[1] >= -0.4672 and colNorm[1] <= 0.4672)
 			{
 				xDir = -1;
 			}
@@ -56,7 +64,7 @@ for (var i = 0; i < array_length_1d(global.blockList); i ++)
 			{
 				xDir = 1;
 			}
-			if(colNorm[0] >= -0.8944 and colNorm[0] <= 0.8944)
+			if(colNorm[0] >= -0.9144 and colNorm[0] <= 0.9144)
 			{
 				yDir = -1;
 			}
@@ -67,11 +75,14 @@ for (var i = 0; i < array_length_1d(global.blockList); i ++)
 			//wrap it all up
 			ball.vel = [velMag * velNorm[0] * xDir, velMag * velNorm[1] * yDir];
 			instance_destroy(brick);
+			global.Score += 100;
 			global.blockList[i] = noone;
 		}
 	}
 }
-
+#endregion
+//***Shift all valid blocks to the left of the array***
+#region
 if (broken)
 {
 	dirty = true;
@@ -102,9 +113,14 @@ if (broken)
 			}
 		}
 	}
+	if (global.blockList[0] == noone)
+	{
+		CreateBlocks();
+	}
 }
-
-//Collision with paddle
+#endregion
+//***Collision with paddle***
+#region
 var pad = instance_find(oPaddle,0);
 var isBelow = ball.y + rad > pad.y - pad.sprite_height;
 var isWithin = (ball.x - rad < pad.x + pad.sprite_width/2) and (ball.x + rad > pad.x - pad.sprite_width/2);
@@ -128,3 +144,4 @@ if (isBelow and isWithin)
 	//My Mode
 	ball.vel = [velMag * tempNorm[0], velMag * tempNorm[1]];
 }
+#endregion

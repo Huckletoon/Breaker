@@ -271,6 +271,14 @@
             }
         },
         {
+            "Key": "cdf8c26f-1f30-41be-a19b-e49b393dc9e2",
+            "Value": {
+                "id": "08f41125-4a88-4e6f-a7b1-596af19bc243",
+                "resourcePath": "scripts\\CreateBlocks\\CreateBlocks.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e42bf5cc-3f46-4d67-a6d0-a4885a11ac3f",
             "Value": {
                 "id": "c6b3c422-da19-449e-b838-a5bc82d9cc11",
@@ -289,7 +297,8 @@
     ],
     "script_order": [
         "5e57d908-e185-42b1-b3bb-e75adf64dafa",
-        "29a42e61-cf7e-49cc-bfb9-0b0d17df4d5b"
+        "29a42e61-cf7e-49cc-bfb9-0b0d17df4d5b",
+        "cdf8c26f-1f30-41be-a19b-e49b393dc9e2"
     ],
     "tutorial": ""
 }

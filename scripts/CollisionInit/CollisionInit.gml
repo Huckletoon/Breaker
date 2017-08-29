@@ -1,6 +1,5 @@
 /// @description Collision Engine Initialization
 /// @param {boolean} clear Clear all fields?
-/// @param {oBall} ball Main ball
 
 //Clear Instance Lists
 if (argument0)
