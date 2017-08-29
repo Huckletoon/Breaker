@@ -21,11 +21,74 @@ if (ball.y < 174 + rad and ball.vel[1] < 0)
 ball.x += ball.vel[0] * 1/game_get_speed(gamespeed_fps);
 ball.y += ball.vel[1] * 1/game_get_speed(gamespeed_fps);
 
+broken = false;
 //Collision with bricks
 for (var i = 0; i < array_length_1d(global.blockList); i ++)
 {
 	var brick = global.blockList[i];
-	
+	if (brick != noone)
+	{
+		if (ball.y > (brick.y + brick.sprite_height/2))
+		{
+			vertWithin = ball.y - rad < brick.y + brick.sprite_height
+		}
+		else
+		{
+			vertWithin = ball.y + rad > brick.y
+		}
+		var horiWithin = (ball.x - rad < brick.x + brick.sprite_width) and (ball.x + rad > brick.x);
+		if (vertWithin and horiWithin)
+		{
+			broken = true;
+			var colMag = sqrt(sqr(ball.x - (brick.x + brick.sprite_width/2)) + sqr(ball.y - (brick.y + brick.sprite_height/2)));
+			var colNorm = [(ball.x - (brick.x + brick.sprite_width/2))/colMag, (ball.y-(brick.y + brick.sprite_height/2))/colMag];
+			var velMag = sqrt(sqr(ball.vel[0]) + sqr(ball.vel[1]));
+			var velNorm = [ball.vel[0]/velMag, ball.vel[1]/velMag];
+			//increase velocity
+			velMag += spd;
+			//wrap it all up
+			var tempVect = [velNorm[0] + dirMod * colNorm[0], velNorm[1] + dirMod * colNorm[1]];
+			var tempMag = sqrt(sqr(tempVect[0]) + sqr(tempVect[1]));
+			var tempNorm = [tempVect[0]/tempMag, tempVect[1]/tempMag];
+			
+			ball.vel = [velMag * tempNorm[0], velMag * tempNorm[1]];
+		
+			instance_destroy(brick);
+			global.blockList[i] = noone;
+		}
+	}
+}
+
+if (broken)
+{
+	dirty = true;
+	while(broken and dirty)
+	{
+		broken = false;
+		dirty = false;
+		for (var n = 0; n < array_length_1d(global.blockList); n++)
+		{
+			if (global.blockList[n] == noone)
+			{
+				broken = true;
+				for (var m = n; m < array_length_1d(global.blockList); m++)
+				{
+					if(global.blockList[m] != noone)
+					{
+						dirty = true;
+					}
+				}
+			}
+			if (broken and n != array_length_1d(global.blockList)-1)
+			{
+				global.blockList[n] = global.blockList[n+1]
+			}
+			else if (broken and n == array_length_1d(global.blockList)-1)
+			{
+				global.blockList[n] = noone;
+			}
+		}
+	}
 }
 
 //Collision with paddle

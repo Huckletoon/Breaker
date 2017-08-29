@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "oPaddleInput",
     "eventList": [
-        
+        {
+            "id": "555d1857-0c59-46ca-9219-a8aac8ea12ed",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 6,
+            "m_owner": "2862d4ce-0116-4645-aca6-8e5e166da7f7"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
