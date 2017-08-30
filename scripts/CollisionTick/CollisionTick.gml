@@ -83,7 +83,7 @@ for (var i = 0; i < array_length_1d(global.blockList); i ++)
 				}
 				else
 				{
-					ball.y = brick.y - rad;
+					ball.y = brick.y - (rad + 1);
 				}
 			}
 			else
@@ -92,7 +92,7 @@ for (var i = 0; i < array_length_1d(global.blockList); i ++)
 			}
 			//wrap it all up
 			ball.vel = [velMag * velNorm[0] * xDir, velMag * velNorm[1] * yDir];
-			brick.Health -= 10;
+			brick.Health -= 20;
 			brick.image_blend = make_color_rgb(255 - brick.Health, brick.Health, 40);
 			if (brick.Health <= 5)
 			{
@@ -138,14 +138,21 @@ if (broken)
 	}
 	if (global.blockList[0] == noone)
 	{
-		CreateBlocks();
+		CreateBlocks(0);
 	}
 }
 #endregion
 //***Collision with paddle***
 #region
 var pad = instance_find(oPaddle,0);
-var isBelow = ball.y + rad > pad.y - pad.sprite_height;
+if (ball.y > (pad.y + rad))
+{
+	isBelow = ball.y - rad < pad.y;
+}
+else
+{
+	isBelow = ball.y + rad > pad.y - pad.sprite_height;
+}
 var isWithin = (ball.x - rad < pad.x + pad.sprite_width/2) and (ball.x + rad > pad.x - pad.sprite_width/2);
 if (isBelow and isWithin)
 {	
