@@ -5,36 +5,6 @@
     "name": "oPaddle",
     "eventList": [
         {
-            "id": "6299f4ca-c841-4e20-942f-7171c04c9863",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 3,
-            "eventtype": 13,
-            "m_owner": "00134f31-491b-48b6-a071-40f2fa0df6bf"
-        },
-        {
-            "id": "c2378015-e3ec-47a8-a895-dbdde9c606db",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 2,
-            "eventtype": 13,
-            "m_owner": "00134f31-491b-48b6-a071-40f2fa0df6bf"
-        },
-        {
-            "id": "baaaac33-de3a-4127-a66d-c270b9710cc0",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 13,
-            "m_owner": "00134f31-491b-48b6-a071-40f2fa0df6bf"
-        },
-        {
             "id": "7becb460-c304-480e-b2e9-0d111fba027e",
             "modelName": "GMEvent",
             "mvc": "1.0",

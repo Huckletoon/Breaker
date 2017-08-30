@@ -56,17 +56,35 @@ for (var i = 0; i < array_length_1d(global.blockList); i ++)
 			//increase velocity
 			velMag += spd;
 			//check sides
-			if (colNorm[1] >= -0.4672 and colNorm[1] <= 0.4672)
+			if (colNorm[1] >= -0.4472 and colNorm[1] <= 0.4472)
 			{
 				xDir = -1;
+				//interpenetration
+				if (colNorm[0] >= 0)
+				{
+					ball.x = brick.x + brick.sprite_width + rad;	
+				}
+				else
+				{
+					ball.x = brick.x - rad;
+				}
 			}
 			else
 			{
 				xDir = 1;
 			}
-			if(colNorm[0] >= -0.9144 and colNorm[0] <= 0.9144)
+			if(colNorm[0] >= -0.9044 and colNorm[0] <= 0.9044)
 			{
 				yDir = -1;
+				//Interpenetration
+				if (colNorm[1] >= 0)
+				{
+					ball.y = brick.y + brick.sprite_height + rad;	
+				}
+				else
+				{
+					ball.y = brick.y - rad;
+				}
 			}
 			else
 			{
@@ -74,9 +92,14 @@ for (var i = 0; i < array_length_1d(global.blockList); i ++)
 			}
 			//wrap it all up
 			ball.vel = [velMag * velNorm[0] * xDir, velMag * velNorm[1] * yDir];
-			instance_destroy(brick);
+			brick.Health -= 10;
+			brick.image_blend = make_color_rgb(255 - brick.Health, brick.Health, 40);
+			if (brick.Health <= 5)
+			{
+				instance_destroy(brick);
+				global.blockList[i] = noone;
+			}
 			global.Score += 100;
-			global.blockList[i] = noone;
 		}
 	}
 }
